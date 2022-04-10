@@ -1,0 +1,129 @@
+@media (max-width:768px) {
+    .main__video{
+        width: auto !important;
+    }
+    footer{
+        bottom:150px !important;
+        /* width: 50% !important; */
+    }
+    /* .box__control{
+        justify-content:space-around !important;
+    } */
+    #toast{
+        margin-right: 175px;
+        transform: scale(0.8);
+        width:200px;
+    }
+    .toast__close i {
+        font-size:30px;
+    }
+    .menu{
+        position: absolute !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        border: none !important;
+        justify-content: space-between !important;
+        right: 0 !important;
+        bottom:30px !important;
+        height: 110px !important;
+        border-radius:0px !important;
+        background-color: #000;
+    }
+    .navbar__title{
+        display: block !important;
+    }
+    .navbar__control__btnScreen{
+        display: none !important;
+    }
+    .navbar__control__share{
+        display: none !important;
+    }
+    .navbar__control__SignUp{
+        display: none !important;
+    }
+    .navbar__control__login{
+        display: none !important;
+    }
+    .navbar__title{
+        display: none !important;
+    }
+    .box__playlist{
+        bottom: 140px !important;
+        width: 100% !important;
+    }
+    .mix__panel{
+        width: 100% !important;
+        bottom: 140px !important;
+    }
+    .box__focus__mode{
+        bottom: 140px !important;
+        width: 100% !important;
+    }
+    .btn__rain{
+        top: 120px !important;
+        right: 60px !important;
+    }
+    .box__change__set{
+        bottom: 140px !important;
+        width: 100% !important;
+        /* top: 0px !important; */
+        height: calc(100% -140px) !important;                                                                                                    
+    }
+    .container__main__video{
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    .container__main__video::-webkit-scrollbar{
+        display: none !important;
+    }
+    .box__child{
+        border: none !important;
+    }
+    .btn__down{
+        width: 20%;
+        height: 5px;
+        background: #fff;
+        position: absolute;
+        top: 5px;
+        border-radius: 12px;
+        opacity: 0.6;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .container__pomodoro {
+        width: 414px !important;
+        right: 0px !important;
+        top: 214px !important;
+        border-radius:0px !important;
+    }
+    .button{
+        padding: 12px 40px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu{
+        top: 200px;
+    }
+    .box__playlist{
+        right: 90px;
+        border-radius: 24px;
+        top: 150px;
+    }
+    .mix__panel{
+        right: 85px;
+        top:120px;
+        border-radius: 24px;
+    }
+    .box__focus__mode{
+        right: 87px;
+        top: 280px;
+        border-radius: 24px;
+    }
+    .box__change__set{
+        right: 87px;
+        top: 120px;
+        border-radius: 24px;
+    }
+
+}

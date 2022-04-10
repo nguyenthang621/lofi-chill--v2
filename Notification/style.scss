@@ -1,0 +1,226 @@
+$color-success:#00cc69;
+$color-error:#fe355a;
+$color-check:#0068ff;
+$color-warning:#adc23a;
+$color-light:#eea650;
+@keyframes slideToLeft {
+    // from {
+    //     opacity: 0;
+    //     transform: translateX(calc(100% + 32px));
+    // }
+    // to{
+    //     opacity: 1;
+    //     transform: translateX(0);
+    // }
+
+    0% {
+		transform: translateX(100%);
+	}
+	40% {
+		transform: translateX(-15%);
+	}
+	80% {
+		transform: translateX(5%);
+	}
+	100% {
+		transform: translateX(-10px);
+	}
+}
+
+@keyframes fade {
+    // from {
+    //     // opacity: 1;
+    //     transform: translateX(0);
+    // }
+    // to {
+    //     // opacity: 0;
+    //     transform: translateX(calc(100% + 32px));
+    // }
+    0% {
+		transform: translateX(-10px);
+	}
+	40% {
+		transform: translateX(0%);
+	}
+	80% {
+		transform: translateX(-10%);
+	}
+	100% {
+		transform: translateX(120%);
+	}
+}
+
+@keyframes borderBar{
+    to{
+        width: 0;
+    }
+}
+
+body{
+    background-color: #f9f9f9;
+    font-family: 'Roboto', sans-serif;
+    & #toast{
+        position: fixed;
+        top: 16px;
+        right: 32px;
+        z-index: 9999;
+    }
+}
+
+
+
+.toast{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    border-radius:2px;
+    background-color: #fff;
+    border-bottom: 4px solid ;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.09);
+    position: relative;
+    margin-top:20px;
+    min-width:450px ;
+    max-width:460px ;
+    animation: slideToLeft 3s ease forwards;
+
+    & .toast__icon{
+        margin:20px;
+        font-size: 44px;
+        padding:20px;
+        border-right: 1px solid #ccc;
+
+    }
+    & .toast__body{
+        & .toast__title{
+            font-size:20px;
+            font-weight:600;
+        }
+        & .toast__messege{
+            letter-spacing: 0.8px;
+            font-size:14px;
+            color: rgb(75, 75, 75);
+        }
+    }
+
+    & .toast__close{
+        position:absolute;
+        top:0;
+        right: 0;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        color:rgb(119, 119, 119);
+    }
+
+    &.toast__success{
+        &::after{
+            content: "";
+            position:absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $color-success;
+            animation:borderBar ease 5s 0.4s forwards;
+        }
+        border-bottom-color:hsla(151, 100%, 40%, 0.2) ;
+        & .toast__icon{
+            & i{
+                color:$color-success;
+            }
+        }
+    }
+    &.toast__check{
+        &::after{
+            content: "";
+            position:absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $color-check;
+            animation:borderBar ease 5s 0.4s forwards;
+        }
+        border-bottom-color:hsla(216, 100%, 50%, 0.2) ;
+        & .toast__icon{
+            & i{
+                color:$color-check;
+            }
+        }
+    }
+    &.toast__error{
+        &::after{
+            content: "";
+            position:absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $color-error;
+            animation:borderBar ease 5s 0.4s forwards;
+        }
+        border-bottom-color:hsla(349, 99%, 60%, 0.2) ;
+        & .toast__icon{
+            & i{
+                color:$color-error;
+            }
+        }
+    }
+    &.toast__warning{
+        &::after{
+            content: "";
+            position:absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $color-light;
+            animation:borderBar ease 5s 0.4s forwards;
+        }
+        border-bottom-color:hsla(69, 54%, 49%, 0.2) ;
+        & .toast__icon{
+            & i{
+                color:$color-light;
+            }
+        }
+    }
+
+
+}
+
+
+
+
+.btn{
+    margin:300px auto;
+    display:flex;
+    align-items:center;
+    margin-left: 200px;
+
+    & .button{
+        padding:20px;
+        display: inline-block;
+        border-radius:12px;
+        color:#fff;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 0.9;
+        margin-left: 20px;
+        &:hover{
+            opacity: 1;
+        }
+    }
+    & .btn-error{
+        background-color: $color-error;
+
+    }
+    & .btn-success{
+        background-color: $color-success;
+    }
+    & .btn-check{
+        background-color: $color-check;
+    }
+    & .btn-warning{
+        background-color: $color-warning;
+    }
+}

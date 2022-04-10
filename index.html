@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="/assets/iconControl/coffee.svg" type="image/x-icon" />
+        <link rel="stylesheet" href="./assets/css/reponsive.css">
+        <link rel="stylesheet" href="./Notification/css.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./Notification/css.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css note/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill</title>
+</head>
+<body>
+    <div class="main">
+    <div id="toast"></div>
+    <div class="btn__rain">
+        <i class="icon__rain fa-solid fa-cloud-rain"></i>
+    </div>
+        <div class="container__main__video">
+
+
+   
+        </div>
+
+    
+
+    <nav class="navbar__main">
+
+        <div class="navbar__logo"><img src="./assets/backgroundMain/logoLofi.gif" alt="logo"></div>
+
+        <div class="navbar__title">
+            <div class="nav__child navbar__title__chill">Chill</div>
+            <div class="nav__child navbar__title__learnEnglish">Learn English</div>
+            <div class="nav__child navbar__title__gym">Gym</div>
+            <div class="nav__child navbar__title__tutorial">How it works</div>
+        </div>
+
+        <div class="navbar__control">
+            <div class="navbar__control__btnLight switch">
+                <span class="icon sun"><i class='bx bx-sun'></i></span>
+                <span class="bi"></span>
+                <span class="icon moon"><i class='bx bx-moon'></i></span>   
+            </div>
+            <div class="navbar__control__btnScreen">
+                <img src="./assets/iconThumb/fullscreen.svg" alt="">
+                <!-- <i class='bx bx-fullscreen'></i> -->
+            </div>
+            <div class="navbar__control__share">Share</div>
+            <div class="navbar__control__SignUp choiceHide">Sign up</div>
+            <div class="navbar__control__login choiceHide">Login</div>
+        </div>
+
+    </nav>
+    <!-- footer -->
+    <footer>
+        <div class="box__control">
+            <!-- btn previous -->
+            <div class="box__control__item btn__pre"><img src="./assets/iconControl/previous.3b347466.svg" alt=""></div>
+            <!-- play -->
+            
+            <div class="box__control__item btn btn__play"><img src="./assets/iconControl/play.18d46dd9.svg" alt=""></div>
+            <!-- pause -->
+            <div class="box__control__item btn btn__pause hide">
+                <img id="btn__pause" src="./assets/iconControl/pause.svg" alt="">
+            </div>
+            <!-- next -->
+            <div class="box__control__item btn__next"><img src="./assets/iconControl/next.9551d6f2.svg" alt=""></div>
+        </div>
+        <audio class="audio" id="audio-main" src=""></audio>
+    </footer>
+
+  <!-- mix panel -->
+    <div class= " box mix__panel hideMode more-menu">
+        <i class="scroll__left fa-solid fa-angle-left fade"></i>
+        <i class=" scroll__right fa-solid fa-angle-right"></i>
+        <div class="btn__down"></div>
+        <div class="mix__panel__header"><h4>Mood</h4></div>
+<!--  mix bar item: -->
+        <div class="mix__panel__item">
+            <div class="item sleey">
+                <i class="fa-solid fa-moon"></i>
+                <p>Sleepy</p>
+            </div>
+            <div class="item jazzy">
+                <i class="fa-solid fa-guitar"></i>
+                <p>Jazzy</p>
+            </div>
+            <div class="item Chill">
+                <i class="fa-solid fa-mug-hot itemActive"></i>
+                <p>Chill</p>
+            </div>
+            <div class="item sadSongs">
+                <i class="fa-solid fa-heart-crack"></i>
+                <p>Sad</p>
+            </div>
+        </div>
+
+        <!-- mix volume void-->
+        <div class="bar__volume">
+            <i class="fa-solid fa-volume-off"></i>
+            <input class="volume volume__video__main" type="range" value="50" step="1" min="0" max="100">
+            <i class="fa-solid fa-volume-high"></i>
+        </div>
+
+
+        <!-- effect noises-->
+        <h2 class="title__effectNoises mix__panel__header">Background noises</h2>
+        <!-- box effect noise -->
+        <div class="effect__noises__container">
+            <!-- render -->
+        </div>
+<!--  -->
+
+<div class="btn__mix__more">
+    <h3>Mix Mode</h3>
+</div>
+    </div>
+
+<!-- end mix panel -->
+ 
+
+<!-- menu -->
+
+<div class="menu">
+    <!-- box mix panel -->
+    <div class="btnBox box__mix__panel">
+        <div class="box__child">
+            <img class="img-top hide" src="assets/iconControl/img-btn-bottom.svg" alt="">
+            <i class="fa-solid fa-sliders"></i>
+        </div>
+    </div>
+    <!-- box love list-->
+    <div class="btnBox play__list  ">
+        <div class="box__child">
+            <i class="fa-solid fa-notes-medical"></i>
+            
+        </div>
+    </div>
+    <!-- box note -->
+    <div class="btnBox list__effect__love">
+        <div class="box__child">
+            <i class="fa-solid fa-bookmark"></i>
+        </div>
+    </div>
+    <!-- box more -->
+    <div class="btnBox more">
+        <div class="box__child">
+            <img class="img-bottom hide" src="assets/iconControl/img-btn-bottom.svg" alt="">
+            <i class="fa-solid fa-circle-exclamation"></i>
+
+        </div>
+    </div>
+</div>
+<!-- end menu -->
+
+<!--box play list -->
+<div class="box box__playlist hideMode">
+    <div class="btn__down"></div>
+    <div class="box__playlist__header">
+        <h4>Playlists</h4>
+    </div>
+    <div class="add__more">
+        <div class="add__item add__sleey not-active">
+            <i class="fa-solid itemActive fa-moon"></i>
+            <p>Sleepy</p>
+        </div>
+        <div class="add__item add__jazzy not-active">
+            <i class="fa-solid itemActive fa-guitar"></i>
+            <p>Jazzy</p>
+        </div>
+        <div class="add__item add__Chill not-active">
+            <i class="fa-solid fa-mug-hot itemActive"></i>
+            <p>Chill</p>
+        </div>
+        <div class="add__item add__sad not-active">
+            <i class="fa-solid fa-heart-crack"></i>
+            <p>Sad</p>
+        </div>
+        <div class="add__item add__baby not-active">
+            <i class="fa-solid fa-baby"></i>
+            <p>Baby</p>
+        </div>
+        <div class="add__item btn__add__more not-active">
+            <i class="fa-solid fa-plus"></i>
+            <p>More</p>
+        </div>
+    </div>
+    <div class="info__item">
+        <h4 class="header__info__item">More song </h4>
+        <div class="container__list__song">
+            <div class="song">
+                <div class="stt">1</div>
+                <div class="nameSong">song1</div>
+                <div class="timeSong">1:10</div>
+            </div>
+            <div class="btn__add__song not-active">
+                <input type="file" id="myFile">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- more -->
+<div class="box box__change__set hideMode">
+    <div class="btn__down"></div>
+    <div class="box__change__set__header">
+        <h4>Changes set</h4>
+    </div>
+    <div class="set__container">
+ 
+    </div>
+</div>
+
+<!-- focus mode -->
+    <div class="box box__focus__mode hideMode">
+        <div class="btn__down"></div>
+        <div class="box__focus__mode__header">
+            <h4>Focus mode</h4>
+        </div>
+        <div class="focus__mode__container">
+            <div class="mode mode__pomodoro ">
+                <div class="icon__mode"><i class='bx bxs-time'></i></div>
+                <div class="title__mode">Pomodoro</div>
+            </div>
+            <div class="mode mode__notes">
+                <div class="icon__mode"><i class='bx bx-list-check'></i></div>
+                <div class="title__mode">Notes</div>
+            </div>
+            <div class="mode mode__history">
+                <div class="icon__mode"><i class='bx bx-history'></i></div>
+                <div class="title__mode">History</div>
+                <div class="icon__lock"><i class="fa-solid fa-lock"></i></div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- focus Pomodoro -->
+    <div class="container__pomodoro hide">
+        <audio id="audio__alarm" src=""></audio>
+        <div class="pomodoro">
+            <div class="btn__close"><img src="./assets/iconControl/close.svg" alt=""></div>
+            <div class="title__pomodore">
+                <h1>Timer</h1>
+            </div>
+            <div class="nav">
+                <div class="button btn__pomodero pomodoroActive">Pomodoro</div>
+                <div class="button btn__time__setting">Time setting</div>
+            </div>
+            <div class="time__container">
+                    <div class="time">
+                        <h1>
+                            <span id="min">25</span>:<span id="sec">00</span>
+                        </h1>
+                    </div>
+                    <div class="title__time">
+                        Focus Session
+                    </div>
+                    <div class="btn__stop__continue">
+                        <div class="btn__time" id="stop">Stop</div>
+                        <div class="btn__time" id="continue">Continue</div>
+                        <div title="next timer" class="btn__time next__timer"><i class="fa-solid fa-forward-step"></i></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="setting__time hide">
+            <div class="btn__back"><i class="fa-solid fa-chevron-left"></i><span>Back</span></div>
+            <div class="btn__close"><img src="./assets/iconControl/close.svg" alt=""></div>
+            <div class="config__time">
+                <div class="change__time time__pomodoro">
+                    <h3>Pomodoro</h3>
+                    <!-- <input id="inputPomodoro"  value="25" name="quantity" min="1" max="100"> -->
+                    <div class="input" id="inputPomodoro" >
+                        <span class="down downPomodoro"><i class="fa-solid fa-minus"></i></span>
+                        <span class="minutes" >25</span>
+                        <span class="up upPomodoro"><i style="font-size:25px" class="fa-thin fa-plus"></i></span>
+                    </div>
+                </div>
+                <div class="change__time time__break">
+                    <h3>break</h3>
+                    <div class="input" id="inputBreak">
+                        <span class="down downBreak"><i class="fa-solid fa-minus"></i></span>
+                        <span class="break" >5</span>
+                        <span class="up upBreak"><i style="font-size:25px" class="fa-thin fa-plus"></i></span>
+                    </div>
+                    <!-- <input id="inputBreak"  value="5" name="quantity" min="1" max="100"> -->
+                </div>
+            </div>
+            <div class="setting__mode">
+                <div class="mode__time autoStartBreaks">
+                    <div class="title__mode__time">Auto start breaks?</div>
+                    <div class="switch btnTurnOn btn__autoStartBreaks ">
+                    <span class="bi bi__autoStartBreaks"></span>
+                    </div>
+                </div>
+                <div class="mode__time playAlarm">
+                    <div class="title__mode__time">Play alarm? (alarm break)</div>
+                    <div class="switch btnTurnOn btn__play__alarm ">
+                    <span class="bi bi__play__alarm"></span>
+                    </div>
+                </div>
+                <div class="mode__time autoStartPomodoro">
+                    <div class="title__mode__time">Auto start pomodoro?</div>
+                    <div class="switch btnTurnOn btn__autoStartPomodoro ">
+                    <span class="bi bi__autoStartPomodoro"></span>
+                    </div>
+                </div>
+                <div class="mode__time alarmSpecial">
+                    <div class="title__mode__time">Alarm special? (for those who can't get up)</div>
+                    <div class="switch btnTurnOff btn__play__alarm__special btnTurnOff">
+                    <span class="bi bi__play__alarm__special slideBi"></span>
+                    </div>
+                </div>
+            </div>
+        <div id="btnDone">Done</div>
+        </div>
+    </div>
+<!-- box alert: -->
+<div class="container__alert__change__set fade">
+    <div class="box__alert__change__set">
+        <div class="closeAlert close__alert"><img src="./assets/iconControl/close.svg" alt=""></div>
+        <div class="icon__alert__change__set"><i class="fa-solid fa-repeat"></i></div>
+        <h2 class="title">
+            Attention
+        </h2>
+        <p>Switching to another context may take some time</p>
+        <div class="btn__close__alert close__alert">
+            Close
+        </div>
+    </div>
+    
+</div>
+
+
+<!-- box Notes -->
+<div class="box__note hide">
+    <div class="container__paint">
+        <div class="navbar">
+            <div class="box__btn__control">
+                <input title="màu sắc" type="color" class="btn__color">
+                <div title="tẩy" class="btn__eraser button__paint effectBtn"><i class="fa-solid fa-eraser"></i></div>
+                <div title="xoá hết" class="btn__clear__all button__paint effectBtn"><i class="fa-solid fa-x"></i></div>
+                <div title="bút" class="btn__pen button__paint effectBtn">
+                    <i class="fa-solid fa-pen"></i>
+                </div>
+                <style data="test" type="text/css"></style>
+                <input title="chỉnh kích thước" class="input__color slider" type="range" value="10" step="0.5" min="1" max="35" >
+            </input>
+                
+            </div>
+            <a title="in" download="my image.png"  class="btn__print button__paint effectBtn"><i class="fa-solid fa-print"></i></a>
+
+        </div>
+            <canvas width="2000" height="2000"  class="container__canvas"></canvas>
+            <div class="btn__close__paint button__paint center">
+                <img src="./assets/iconControl/close.svg" alt="">
+            </div>
+            <div class="btn__screen__paint button__paint center">
+                <!-- <img src="./assets/iconThumb/fullscreen.svg" alt=""> -->
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+        </div>
+</div>
+
+    </div>
+<!-- end main -->
+
+    <script type="module" src="main.js"></script>
+    <script src="note.js"></script>
+</body>
+</html>
+

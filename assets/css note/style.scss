@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+body{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+.container__paint{
+    
+    & .navbar{
+        @include size(100%,70px);
+        background-color: #eea650; 
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        & .box__btn__control{
+            display:flex;
+            justify-content: space-around;
+            width: 350px;
+            
+            & .btn__color{
+                @include size(50px,30px);
+                border-radius:4px ;
+                background-color: #eea650;
+                border-radius: 4px;
+                box-shadow:  -3px -3px 6px #ca8d44,
+                3px 3px 6px #ffbf5c;
+                border:none;
+                cursor: pointer;
+            }
+
+            & .btn__pen{
+                cursor: pointer;
+            }
+            & .btn__eraser{
+                cursor: pointer;
+                &:focus{
+                    box-shadow: none !important;
+                    border:1px solid rgba(255, 255, 255, 0.5);
+                }
+            }
+            & .btn__clear__all{
+                cursor: pointer;
+            }
+            & .input__color{
+                cursor: pointer;
+                -webkit-appearance: none;  
+                height: 5px;
+                border-radius: 8px;
+                margin-top: 10px;
+                background-color: #dbdbdb;
+                &::-webkit-slider-thumb {
+                    appearance: none;
+                    @include size(20px);
+                    border-radius: 50%;
+                    background-color: rgb(0, 0, 0);
+                    cursor: pointer;
+                    
+                  }
+            }
+        }
+        
+        & i{
+            line-height: 25px;
+            color:rgb(222, 222, 222);
+        }
+        & .btn__print{
+            margin-right: 20px;
+        }
+    }    
+
+        & canvas{
+            display: block;
+            margin: 0 auto;
+            background-color: #fff;
+        }
+
+
+    }
+    .more__page{
+        @include size(30px);
+        position: fixed;
+        right: 20px;
+        bottom: 50px;
+        cursor: pointer;
+        & i{
+            color: #fff;
+            font-size: 50px;
+        }
+    }
+
+.button__paint{
+    @include size(30px,25px);
+    display:flex;
+    justify-content: center;
+    background-color: #eea650;
+    border-radius: 4px;
+    box-shadow:  -3px -3px 6px #ca8d44,
+    3px 3px 6px #ffbf5c;
+    &:hover{
+
+    }
+}
+
+.effectPushBtn{
+    box-shadow: none !important;
+    border:1px solid rgba(255, 255, 255, 0.5);
+}
